@@ -1,0 +1,18 @@
+
+<body>
+    <div class="header">
+        <h1>Hello There, <span>enter your details below to register to this amazing app.</span></h1>
+    </div>
+    <div class="register">
+        <h1>SignUp</h1>
+        <div class="formcontainer">
+            <form [formGroup]="signupForm" (ngSubmit)="loginUser()">
+                <input type="text" name="firstName" placeholder="first name" formControlName="firstName"><br>
+                <input type="text" name="lastName" placeholder="last name" formControlName="lastName"><br>
+                <input type="text" name="email" placeholder="email" formControlName="email"><br>
+                <input type="text" name="password" placeholder="password" formControlName="password"><br>
+                <button (click)="addUser()" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>

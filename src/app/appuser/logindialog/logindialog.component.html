@@ -1,0 +1,38 @@
+
+<button mat-icon-button class="close-button" (click)="onClose()" [mat-dialog-close]="true">
+    <mat-icon class="close-icon" >close</mat-icon>
+  </button>
+
+
+
+<div class="title">
+    <h1>Login</h1>
+</div>
+
+<div class="md-dialog-container">
+
+    <form #form="ngForm" [formGroup]="loginForm" (ngSubmit)="submit()" autocomplete="off">
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your email</mat-label>
+                <input type="text" matInput placeholder="pat@example.com" formControlName="username" required>
+                <mat-error *ngIf="!loginForm.controls['username'].valid">
+                    {{errorMessageEmail()}}
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your password</mat-label>
+                <input type="password" matInput formControlName="password" required>
+                <mat-error *ngIf="!loginForm.controls['password'].valid">
+                    {{ errorMessagePassword() }}
+                </mat-error>
+            </mat-form-field>
+            </div>
+            <p *ngIf="loginError && loginError.length>0" style="float: left; font-size:small; color:rgb(255, 0, 0);">
+                {{loginError}}
+            </p> 
+            <button class="btn1" type="submit" [disabled]="!loginForm.valid" mat-button>Login</button>
+            <button class="btn" (click)="resetForm()" mat-button>Reset</button><br>
+    </form>
+</div>
+

@@ -1,0 +1,98 @@
+
+  body{
+      background-color: rgb(243, 243, 243);
+  }
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 1em;
+
+}
+/* .category-btn{
+    width: 20em;
+} */
+.data{
+    width: 30%;
+}
+button{
+    font-size: small;
+    color: rgb(114, 114, 114);
+    margin-bottom: 1em;
+    width: 15em;
+    border: 0.3px solid rgb(191, 191, 255);
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+}
+
+.switch{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    justify-content: space-around;
+}
+mat-card{
+    box-shadow: 0 4px 10px 0 #c7c6c6;
+   
+}
+.vl {
+    border-left: 1px solid rgb(225, 225, 225);
+    margin-left: 2em;
+  }
+  h2{
+      color: rgb(135, 135, 135);
+  }
+  .categories{
+      width: 100%;
+  }
+  .title-mat{
+      /* height:5em; */
+      margin-bottom: 1em;
+  }
+  .btn-mat{
+    margin-left: 2em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 10em;
+  }
+  .stat-mat{
+    margin-left: 2em;
+    margin-bottom: 1em;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .stat{
+      width: 45%;
+      height: 3em;
+      margin-bottom: 8px;
+      font-size: small;
+      border: 0.1px solid rgb(255, 208, 119);
+  }
+  .add-category{
+      height: 3em;
+      margin-left: 81em;
+  }
+  span{
+      color: rgb(87, 87, 87);
+      
+  }
+
+
+
+
+
+
+
+
+

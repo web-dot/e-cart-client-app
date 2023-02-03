@@ -1,0 +1,48 @@
+h1{
+    margin-left: 1.3em;
+}
+.form-dialog{
+    width: 40em;
+    height: 20em;
+    display: flex;
+    justify-content: center;
+}
+.example-full-width{
+    width: 35em;
+    height: 3em;
+    /* text-align: center; */
+}
+.input-fields{
+    margin-bottom: 2em;
+}
+.actions{
+    display: flex;
+    flex-direction: row;
+    justify-content:end;
+    margin-top: 2em;
+}
+button{
+    margin-left: 2px;
+}
+.cancelBtn{
+    margin-left: 1em;
+}
+mat-error{
+    font-size: 15px;
+}
+.close-button{
+    float: right;
+    /* top:-24px;
+    right:-24px; */
+  }
+  hr{
+      margin-top: 2em;
+  }
+  
+  .close-icon {
+    transition: 1s ease-in-out;
+  }
+  
+  .close-icon:hover {
+    transform: rotate(180deg);
+  }

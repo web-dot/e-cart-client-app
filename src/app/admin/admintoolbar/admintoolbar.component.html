@@ -1,0 +1,27 @@
+    <mat-toolbar>
+        <h3><em>E</em>-Store</h3>
+        <div class="catagories" *ngIf="showAdmin">
+            <button mat-button [matMenuTriggerFor]="menu">Catagories</button>
+            <mat-menu #menu="matMenu" >
+                    <button (click)="onClickRoute(item)" *ngFor="let item of categoryList" mat-menu-item>{{item.name}}</button>
+                <hr>
+                <button mat-menu-item (click)="addNewCat()">Add New</button>
+            </mat-menu>
+        </div>
+
+        <div class="catagories" *ngIf="showUser">
+            <button mat-button [matMenuTriggerFor]="menu">Catagories</button>
+            <mat-menu #menu="matMenu">
+                    <button (click)="onClickRoute(item)" *ngFor="let item of categoryList" mat-menu-item>{{item.name}}</button>
+                <hr>
+                <button mat-menu-item (click)="addNewCat()">Add New</button>
+            </mat-menu>
+        </div>
+        <!-- <span class="example-spacer"></span> -->
+        <span class="username"><span style="font-size: small;">welcome</span> {{ name}}</span>
+            
+            <button class="logout" (click)="logout()" mat-icon-button>
+                <span class="material-icons">logout</span>
+            <span class="logout">Logout</span>
+            </button>
+      </mat-toolbar>

@@ -1,0 +1,25 @@
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  mat-toolbar{
+    box-shadow: 0 4px 10px 0 #dedede;
+  }
+  h1{
+    color: rgb(0, 166, 255);
+    margin: auto;
+    font-size: 2em;
+  }
+  .catagories{
+      margin-left: 2em;
+  }
+  p{
+      margin-left: 1em;
+  }
+  .username{
+    margin-left: 43em;
+    margin-right: 2em;
+  }
+  .logout{
+    font-size: small;
+  }

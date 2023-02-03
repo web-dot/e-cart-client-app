@@ -1,0 +1,57 @@
+
+<button mat-icon-button class="close-button" (click)="onClose()" [mat-dialog-close]="true">
+    <mat-icon class="close-icon" >close</mat-icon>
+  </button>
+
+<div class="title">
+    <h1>Signup</h1>
+</div>
+
+<div class="md-dialog-container">
+
+    <form #form="ngForm" [formGroup]='regForm' (ngSubmit)="submit()"  autocomplete="off">
+        <mat-form-field appearance="fill" >
+            <mat-label>Name</mat-label>
+            <input type="text" matInput placeholder="Enter Your Name" formControlName="name" required autocomplete="new-name">
+            <mat-error *ngIf="regForm.controls['name'].invalid && regForm.controls['name'].touched">
+            {{ titleAlert }}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="Enter you email ID" formControlName="email" required>
+            <mat-error *ngIf="!regForm.controls['email'].valid && regForm.controls['email'].touched">
+                {{ getErrorEmail() }}
+                
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Enter your password" formControlName="password" required>
+            <mat-error *ngIf="!regForm.controls['password'].valid && regForm.controls['password'].touched">
+                {{ getErrorPassword() }}
+            </mat-error>
+        </mat-form-field><br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Mobile</mat-label>
+            <input type="text" matInput placeholder="Enter your mobile number" formControlName="mobile" required>
+            <!-- <mat-error *ngIf="!regForm.controls['password'].valid && regForm.controls['pass'].touched">
+                {{ getErrorPassword() }}
+            </mat-error> -->
+        </mat-form-field><br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Billing Address</mat-label>
+            <textarea matInput  formControlName="billingaddress"></textarea>
+        </mat-form-field>
+        <p *ngIf="userExistsError && userExistsError.length>0" style="float: left; font-size:small; color:rgb(0, 163, 0);">
+            {{userExistsError}}
+        </p> 
+        <button class="btn1" mat-raised-button type="submit" [disabled]="!regForm.valid">Register</button>
+        <button class="btn" mat-raised-button (click)="reset()" >Reset</button><br>
+    </form>
+</div>
+

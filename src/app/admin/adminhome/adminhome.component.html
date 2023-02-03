@@ -1,0 +1,91 @@
+
+<body>
+    <app-admintoolbar></app-admintoolbar>
+    <br>
+    <span class="span" style="margin-left: 1em; font-weight: bold;">Dashboard</span>
+    <!-- <span style="margin-left: 1em; font-weight: bold; margin-left: 17.5em;">Catagories</span> -->
+    <span><button class="add-category" color="primary" (click)="addNewCat()" mat-raised-button>Add New Category</button></span>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-4">
+                <h1>Catagories</h1>
+                <div class="chartcontainer">
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                  </div>
+            </div>
+            <div class="vl"></div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class=" col-md-6" *ngFor="let item of categoryList">
+                        <div class="col-md-2">
+                            <button mat-raised-button><p>{{item.name}}</p></button>
+                        </div>
+                    </div>
+                    <button class="add-category" color="primary" mat-raised-button><h4>Add New Category</h4></button>
+                </div>
+            </div>
+        </div>
+        
+    </div> -->
+
+    <div class="container">
+        
+        <div class="data">
+            
+            <div >
+                <mat-card class="title-mat">
+                    <span style="color:royalblue; font-weight: bold;">Catagory Management</span><br>
+                    <span style="font-size: small;">Category management based on trends</span>
+                </mat-card>
+            </div>
+
+            <div class="graph">
+                <mat-card class="data-mat">
+                    <span style="color:royalblue; font-weight: bold;">Commodity-wise Trade Live Chart</span><br>
+                    <span style="font-size: x-small;">source: https://data.gov.in/</span>
+                    <canvas id="myChart" width="200" height="400"></canvas>
+                </mat-card>
+            </div>
+          
+        </div>
+        <div class="vl"></div>
+        <div class="switch">
+            <div class="categories">
+                <mat-card class="btn-mat" >
+                    <div *ngFor="let item of categoryList">
+                        <button (click)="onClickRoute(item)" mat-raised-button><p>{{item.name}}</p></button>
+                    </div>
+                </mat-card>
+                <!-- <span>Top Commodities</span> -->
+                <mat-card class="stat-mat">
+                    <mat-card class="stat">
+                        <span style="color: rgb(121, 121, 121);">{{trendCategory1}}</span>
+                        <h4 style="color: rgb(0, 194, 120);">  {{ trendSum1}}</h4>    
+                    </mat-card>
+                    <mat-card class="stat">
+                        <span style="color: rgb(121, 121, 121);">{{trendCategory2}}</span>
+                        <h4 style="color: rgb(0, 194, 120);">  {{ trendSum2}}</h4>  
+                    </mat-card>
+                    <mat-card class="stat">
+                        <span style="color: rgb(121, 121, 121);">{{trendCategory3}}</span>
+                        <h4 style="color: rgb(0, 194, 120);">  {{ trendSum3}}</h4>  
+                    </mat-card>
+                    <mat-card class="stat">
+                        <span style="color: rgb(121, 121, 121);">{{trendCategory4}}</span>
+                        <h4 style="color: rgb(0, 194, 120);">  {{ trendSum4}}</h4>  
+                    </mat-card>
+                </mat-card>
+            </div>
+            <!-- <div>
+                <mat-card class="title">
+                    <h2>Inventory</h2>
+                    <p>Category management based on trends</p>
+                </mat-card>
+            </div> -->
+        </div>
+
+
+    </div>
+
+    
+</body>

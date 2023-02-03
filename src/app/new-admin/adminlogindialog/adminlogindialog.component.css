@@ -1,0 +1,36 @@
+h1{
+    margin-left: 2.7em;
+}
+.form-dialog{
+    width: 40em;
+    height: 20em;
+    display: flex;
+    justify-content: center;
+}
+input{
+    width: 35em;
+    height: 3em;
+    text-align: center;
+    border: 1px solid rgb(204, 204, 204);
+}
+input:focus{
+    border: 1px solid rgb(0, 102, 255);
+}
+.input-fields{
+    margin-bottom: 2em;
+}
+.actions{
+    display: flex;
+    flex-direction: row;
+    justify-content:start;
+    margin-top: 2em;
+}
+button{
+    margin-left: 2px;
+}
+.cancelBtn{
+    margin-left: 1em;
+}
+mat-error{
+    font-size: 15px;
+}

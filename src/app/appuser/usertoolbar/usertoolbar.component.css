@@ -1,0 +1,45 @@
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  mat-toolbar{
+    background-color: #FFF;
+    box-shadow: 0 4px 10px 0 #e6e6e6;
+  }
+  h1{
+    color: rgb(0, 166, 255);
+    margin: auto;
+    font-size: 2em;
+  }
+  h3{
+    margin-left: 1em;
+  }
+  .catagories{
+      margin-left: 2em;
+  }
+  p{
+      margin-left: 0.3em;
+      font-size: small;
+  }
+  button{
+      margin-left: 1em;
+      margin-right: 3em;
+      font-size:small;
+  }
+  .login{
+    margin-right: 2em;
+  }
+  .signup{
+    margin-right: 8em;
+  }
+  span{
+    margin-right: 0.1em;
+  }
+  
+  span:hover{
+    color: dodgerblue;
+  }
+
+  .mat-icon-button::ng-deep .mat-button-focus-overlay {
+    display: none;
+}

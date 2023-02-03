@@ -1,0 +1,41 @@
+
+
+<button mat-icon-button class="close-button" (click)="onClose()" [mat-dialog-close]="true">
+    <mat-icon class="close-icon" color="warn">close</mat-icon>
+  </button>
+
+
+
+<h1>Add New Category</h1>
+<div class="form-dialog">
+    <form [formGroup]="newcatform" autocomplete="off">
+        <div class="input-fields">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Enter Category Name</mat-label>
+                <input matInput placeholder="Ex. Computer and Accessories" formControlName="name">
+              </mat-form-field>
+            <!-- <mat-error *ngIf="newcatform.controls['password'].invalid && newcatform.controls['password'].touched">
+                {{ titleAlert }}
+              </mat-error> -->
+        </div>
+        <div class="input-fields">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Enter a description</mat-label>
+                <textarea matInput placeholder="Ex. Computer peripherals and components" formControlName="description"></textarea>
+              </mat-form-field>
+            <!-- <mat-error *ngIf="newcatform.controls['password'].invalid && newcatform.controls['password'].touched">
+                {{ titleAlert }}
+              </mat-error> -->
+        </div>
+        <div class="actions">
+            <button [disabled]="!newcatform.valid" (click)="addCategory()"  mat-raised-button color="primary">Add Catagory</button>
+            <button class="cancelBtn" mat-raised-button (click)="clearMessage()" color="primary">Reset</button>
+        </div>
+        <p *ngIf="confirmMessage && confirmMessage.length>0" style=" font-size:small; color:limegreen;">
+            {{confirmMessage}}
+        </p>   
+        <hr>
+        <p style="font-size: small; float: right; color: darkred;">All fields are mandatory*</p>
+    </form>
+</div>
+

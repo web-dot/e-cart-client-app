@@ -1,0 +1,38 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: brown;
+}
+
+.title{
+    color: chartreuse;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.header{
+    text-align: center;
+    font-size: large;
+    margin-top:4em;
+    box-shadow: 0 4px 10px 0 #e0e0e0;
+    border-radius: 30px;
+}
+span{
+    font-size:medium;
+}
+.register{
+    box-shadow: 0 4px 10px 0 #e0e0e0;
+    text-align: center;
+    border-radius: 30px;
+    width: 40em;
+    margin: 0 auto;
+}
+.formcontainer{
+    font-size: large;
+}
+input{
+    margin: 1em;
+    width: 20em;
+    height: 2em;
+    border: 1px solid rgb(213, 213, 213);
+    text-align: center;
+    border-radius: 10px;
+}

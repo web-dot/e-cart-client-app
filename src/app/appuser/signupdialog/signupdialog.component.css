@@ -1,0 +1,54 @@
+
+  form{
+    text-align:center;
+
+  }
+  mat-form-field {
+    width: 100%;
+  }
+ h1{
+  color: dodgerblue;
+  font-family:Arial, Helvetica, sans-serif;
+ }
+ .login-dialog{
+   width: 30em;
+   height: 20em;
+ }
+ .btn, .btn1{
+   margin-bottom: 6em;
+   float: right;
+   background-color: rgb(84, 228, 0);
+   color: aliceblue;
+   font-size: large;
+ }
+ .btn{
+   margin-right: 1em;
+ }
+
+ .close-button{
+  float: right;
+  background-color: rgb(84, 228, 0);
+  color: aliceblue;
+}
+hr{
+    margin-top: 2em;
+}
+
+.close-icon {
+  transition: 1s ease-in-out;
+}
+
+.close-icon:hover {
+  transform: rotate(180deg);
+}
+.md-dialog-container {
+  width: 30em;
+  height: 30em;
+}
+p{
+  width: 100%;
+  /* margin-bottom: 4em; */
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+}

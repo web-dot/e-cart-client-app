@@ -1,0 +1,30 @@
+
+<body>
+    <app-admintoolbar></app-admintoolbar>
+    
+<div class="section">
+
+    <div class="title">
+        <span class="title-text"><em>Explore</em> Catagories</span>
+    </div>
+    <div class="container" *ngFor="let item of categoryList">
+   
+            <mat-card  class="example-card">
+                <div class="top">
+
+                    <mat-card-title-group>
+                      <mat-card-title style="color: hsl(152, 100%, 33%);"> {{item.name}}</mat-card-title>
+                      <!-- <img mat-card-sm-image src="" > -->
+                    </mat-card-title-group>
+                    <mat-card-content>
+                      <span>{{item.description}}</span>
+                    </mat-card-content>
+                </div>
+                <div>
+                    <button (click)="onClickRoute(item)" mat-raised-button><span>Explore</span></button>
+
+                </div>
+            </mat-card>
+    </div>
+</div>
+</body>

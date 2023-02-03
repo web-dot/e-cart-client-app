@@ -1,0 +1,25 @@
+<h1>Admin Login</h1>
+<div class="form-dialog">
+    <form [formGroup]="loginForm">
+        <div class="input-fields">
+            <input type="text" placeholder="enter userid" formControlName="userid" required><br>
+            <mat-error *ngIf="loginForm.controls['userid'].invalid && loginForm.controls['userid'].touched">
+                {{ getErrorMessage() }}
+              </mat-error>
+        </div>
+        <div class="input-fields">
+            <input type="password" placeholder="enter password" formControlName="password" required><br>
+            <mat-error *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+                {{ titleAlert }}
+              </mat-error>
+        </div>
+        <div class="actions">
+            <button (click)="adminLogs()" mat-raised-button>Submit</button>
+            <button class="cancelBtn" (click)="onCancel()" mat-raised-button>Cancel</button>
+        </div>
+        <p *ngIf="signInError && signInError.length>0" style="color: darkred;">
+            
+            {{signInError}}
+        </p>
+    </form>
+</div>

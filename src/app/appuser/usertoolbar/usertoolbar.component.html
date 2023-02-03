@@ -1,0 +1,21 @@
+<mat-toolbar>
+    <h3><em>E</em>-Store</h3>
+    <div class="catagories">
+        <!-- <button mat-button [matMenuTriggerFor]="menu">Catagories</button> -->
+        <mat-menu #menu="matMenu">
+                <button  mat-menu-item></button>
+            <hr>
+            <button mat-menu-item >Add New</button>
+        </mat-menu>
+    </div>
+    
+    <span class="example-spacer"></span>
+    
+            <button class="login" mat-icon-button>
+                <span class="material-icons" (click)="login()">login</span><span>Login</span>
+            </button>
+        <button class="signup" (click)="signup()" mat-icon-button>
+            <span class="material-icons">how_to_reg</span><span>signup</span>
+        </button>
+
+  </mat-toolbar>
