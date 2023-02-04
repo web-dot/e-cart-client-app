@@ -8,6 +8,8 @@ export class UserService{
 
     constructor(private _httpService: HttpClient){}
 
+    ROOT_URL: String =  "http://ec2-54-248-148-149.ap-northeast-1.compute.amazonaws.com:8080";
+
     addUser(user : User){
         let options = {
             headers: new HttpHeaders({
@@ -19,7 +21,7 @@ export class UserService{
 
         let body=JSON.stringify(user);
         let headers = new Headers({'Content-Type': 'application/json'});
-        return this._httpService.post("http://localhost:5050/api/setNewUser", body, options);
+        return this._httpService.post(this.ROOT_URL + "/api/setNewUser", body, options);
     }
 
 }

@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AppUser } from '../appuser/appuser';
 import { UserAuthBody } from '../appuser/userauthbody';
 
-const apiUrl = 'http://localhost:5050/api/login';
+//const apiUrl = 'http://localhost:8080/api/login';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,9 @@ export class AppuserserviceService {
 
 isLoggedIn = false;
 redirectUrl: string;
+
+ROOT_URL: String =  "http://ec2-54-248-148-149.ap-northeast-1.compute.amazonaws.com:8080";
+                    
 
   constructor(private _httpService: HttpClient) { }
 
@@ -31,7 +34,7 @@ redirectUrl: string;
       }),responseType: 'text' as 'json'
     };
     let body = JSON.stringify(userauthbody)
-    return this._httpService.post("http://localhost:5050/login", body, options)
+    return this._httpService.post(this.ROOT_URL +  "/login", body, options)
   }
 
   public register(appuser: AppUser){
@@ -44,7 +47,7 @@ redirectUrl: string;
     };
 
     let body=JSON.stringify(appuser);
-    return this._httpService.post("http://localhost:5050/register", body, options)
+    return this._httpService.post(this.ROOT_URL + "/register", body, options)
   }
 
 }

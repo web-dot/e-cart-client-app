@@ -13,9 +13,10 @@ export class AdminserviceService {
 
   constructor(private _httpService: HttpClient) { }
 
+  ROOT_URL: String =  "http://ec2-54-248-148-149.ap-northeast-1.compute.amazonaws.com:8080";
 
   getAdminCreds(): any{
-    return this._httpService.get("http://localhost:5050/api/getAdminLog/admin");
+    return this._httpService.get(this.ROOT_URL + "/api/getAdminLog/admin");
   }
 
   addCategory(category: Category){
@@ -28,17 +29,17 @@ export class AdminserviceService {
     };
     
     let body=JSON.stringify(category);
-    return this._httpService.post("http://localhost:5050/api/addCategory", body, options)
+    return this._httpService.post(this.ROOT_URL + "/api/addCategory", body, options)
   }
 
 
   getCategories(){
-    return this._httpService.get("http://localhost:5050/api/getCategory")
+    return this._httpService.get(this.ROOT_URL +  "/api/getCategory")
   }
 
   deleteCategory(id: string){
     console.log("-->", id)
-    return this._httpService.delete(`http://localhost:5050/api/deleteCategory/${id}`)
+    return this._httpService.delete( this.ROOT_URL + `/api/deleteCategory/${id}`)
   }
 
   addProduct(product: Product, id: string){
@@ -52,7 +53,7 @@ export class AdminserviceService {
     };
 
     let body=JSON.stringify(product);
-    return this._httpService.post("http://localhost:5050/api/addProduct/"+id, body, options)
+    return this._httpService.post( this.ROOT_URL + "/api/addProduct/"+id, body, options)
 
 
   }
@@ -67,7 +68,7 @@ export class AdminserviceService {
         } ),responseType: 'text' as 'json'
     };
     let body = JSON.stringify(product);
-    return this._httpService.post("http://localhost:5050/api/deleteProduct/"+id, body, options)
+    return this._httpService.post(this.ROOT_URL +  "/api/deleteProduct/"+id, body, options)
   }
 
 
