@@ -11,7 +11,7 @@ export class UserService{
     ROOT_URL: String =  "http://ec2-54-248-148-149.ap-northeast-1.compute.amazonaws.com:8080";
 
     addUser(user : User){
-        let options = {
+        let options= {
             headers: new HttpHeaders({
                 'Content-Type':  'application/json',
                 "Access-Control-Allow-Origin": "*",
